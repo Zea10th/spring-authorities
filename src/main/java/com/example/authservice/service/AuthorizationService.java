@@ -1,7 +1,7 @@
 package com.example.authservice.service;
 
-import com.example.authservice.exception.InvalidCredentials;
-import com.example.authservice.exception.UnauthorizedUser;
+import com.example.authservice.exceptions.InvalidCredentials;
+import com.example.authservice.exceptions.UnauthorizedUser;
 import com.example.authservice.model.Authorities;
 import com.example.authservice.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -11,6 +11,10 @@ import java.util.List;
 @Service
 public class AuthorizationService {
     UserRepository userRepository;
+
+    public AuthorizationService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     public List<Authorities> getAuthorities(String user, String password) {
         if (isEmpty(user) || isEmpty(password)) {

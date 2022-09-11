@@ -1,6 +1,7 @@
-package com.example.authservice.exception;
+package com.example.authservice.exceptions;
 
 public class UnauthorizedUser extends RuntimeException {
+
     public UnauthorizedUser(String msg) {
         super(msg);
     }

@@ -1,4 +1,4 @@
-package com.example.authservice.exception;
+package com.example.authservice.exceptions;
 
 public class InvalidCredentials extends RuntimeException {
     public InvalidCredentials(String msg) {
