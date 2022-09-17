@@ -36,3 +36,5 @@ build/
 mvnw
 mvnw.cmd
 
+### Mac OS
+.DS_Store
